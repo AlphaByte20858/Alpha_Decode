@@ -16,4 +16,24 @@ public class Constants {
                 .pathConstraints(pathConstraints)
                 .build();
     }
+    public static FollowerConstants followerConstants = new FollowerConstants()
+        .mass(15);
+
+    public static MecanumConstants driveConstants = new MecanumConstants()
+        .maxPower(1)
+        .rightFrontMotorName("MDF")
+        .rightRearMotorName("MDT")
+        .leftRearMotorName("MET")
+        .leftFrontMotorName("MEF")
+        .leftFrontMotorDirection(DcMotorSimple.Direction.REVERSE)
+        .leftRearMotorDirection(DcMotorSimple.Direction.REVERSE)
+        .rightFrontMotorDirection(DcMotorSimple.Direction.FORWARD)
+        .rightRearMotorDirection(DcMotorSimple.Direction.FORWARD)
+
+    public static Follower createFollower(HardwareMap hardwareMap) {
+        return new FollowerBuilder(followerConstants, hardwareMap)
+                .pathConstraints(pathConstraints)
+                .mecanumDrivetrain(driveConstants)
+                .build();
+    }
 }

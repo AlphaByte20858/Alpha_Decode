@@ -25,6 +25,12 @@ public class Constants {
         .forwardEncoder_HardwareMapName("leftFront") //mudar
         .strafeEncoder_HardwareMapName("rightRear") //mudar
         .IMU_HardwareMapName("imu") //conferir
+        .forwardPodY() //definir
+        .strafePodX() //definir
+        //.forwardEncoderDirection(Encoder.REVERSE) //mudar caso necessario
+        //.strafeEncoderDirection(Encoder.REVERSE)  //mudar caso necessario
+        .forwardTicksToInches(multiplier)
+        .strafeTicksToInches(multiplier)
         .IMU_Orientation(
             new RevHubOrientationOnRobot(
                 RevHubOrientationOnRobot.LogoFacingDirection.UP,

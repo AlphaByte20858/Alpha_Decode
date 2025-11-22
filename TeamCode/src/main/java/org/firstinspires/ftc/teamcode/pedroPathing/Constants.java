@@ -33,8 +33,8 @@ public class Constants {
         .strafeTicksToInches(multiplier)
         .IMU_Orientation(
             new RevHubOrientationOnRobot(
-                RevHubOrientationOnRobot.LogoFacingDirection.UP,
-                RevHubOrientationOnRobot.UsbFacingDirection.LEFT
+                RevHubOrientationOnRobot.LogoFacingDirection.right,
+                RevHubOrientationOnRobot.UsbFacingDirection.UP
             )
         );
 

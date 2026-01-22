@@ -21,28 +21,20 @@ public class Constants {
         .rightFrontMotorDirection(DcMotorSimple.Direction.FORWARD)
         .rightRearMotorDirection(DcMotorSimple.Direction.FORWARD)
 
-    public static TwoWheelConstants localizerConstants = new TwoWheelConstants()
-        .forwardEncoder_HardwareMapName("leftFront") //mudar
-        .strafeEncoder_HardwareMapName("rightRear") //mudar
-        .IMU_HardwareMapName("imu") //conferir
-        .forwardPodY() //definir
-        .strafePodX() //definir
-        //.forwardEncoderDirection(Encoder.REVERSE) //mudar caso necessario
-        //.strafeEncoderDirection(Encoder.REVERSE)  //mudar caso necessario
-        .forwardTicksToInches(multiplier)
-        .strafeTicksToInches(multiplier)
-        .IMU_Orientation(
-            new RevHubOrientationOnRobot(
-                RevHubOrientationOnRobot.LogoFacingDirection.right,
-                RevHubOrientationOnRobot.UsbFacingDirection.UP
-            )
-        );
+  public static PinpointConstants localizerConstants = new PinpointConstants()
+            .forwardPodY(-5) //definir distancia
+            .strafePodX(0.5) //definir distancia
+            .distanceUnit(DistanceUnit.MM) //mudei a unidade de distancia de polegadas para milimetros
+            .hardwareMapName("pinpoint") //conferir
+            .encoderResolution(GoBildaPinpointDriver.GoBildaOdometryPods.goBILDA_4_BAR_POD)
+            .forwardEncoderDirection(GoBildaPinpointDriver.EncoderDirection.FORWARD) //testar pra ver se vai ser necessario inverter algum deles
+            .strafeEncoderDirection(GoBildaPinpointDriver.EncoderDirection.FORWARD);
 
     public static PathConstraints pathConstraints = new PathConstraints(0.99, 100, 1, 1);
 
     public static Follower createFollower(HardwareMap hardwareMap) {
         return new FollowerBuilder(followerConstants, hardwareMap)
-                .twoWheelLocalizer(localizerConstants)
+                .pinpointLocalizer(localizerConstants
                 .pathConstraints(pathConstraints)
                 .mecanumDriveTrain(driveConstants)
                 .build();

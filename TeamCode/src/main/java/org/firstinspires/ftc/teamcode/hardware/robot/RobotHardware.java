@@ -15,7 +15,7 @@ public class RobotHardware {
     OpMode opMode;
     public DcMotorEx MDT, MDF, MET, MEF, MSH, MIT;
     double axial, lateral, yaw,angle;
-    public Servo wristServo, clawServo; //Define o nome dos servos no sistema
+    public Servo servoI; //Define o nome dos servos no sistema
     public IMU imu;
 
 
@@ -25,6 +25,7 @@ public class RobotHardware {
         MDF = opMode.hardwareMap.get(DcMotorEx.class, "MDF");
         MEF = opMode.hardwareMap.get(DcMotorEx.class, "MEF");
         MSH = opMode.hardwareMap.get(DcMotorEx.class, "MSH");
+        MSHII = opMode.hardwareMap.get(DcMotorEx.class, "MSH");
         MIT = opMode.hardwareMap.get(DcMotorEx.class, "MIT");
 
         MDF.setDirection(DcMotorSimple.Direction.FORWARD);
@@ -32,6 +33,8 @@ public class RobotHardware {
         MDT.setDirection(DcMotorSimple.Direction.FORWARD);
         MET.setDirection(DcMotorSimple.Direction.REVERSE);
         MEF.setDirection(DcMotorSimple.Direction.REVERSE);
+        MSH.setDirection(DcMotorSimple.Direction.FORWARD);
+        MSHII.setDirection(DcMotorSimple.Direction.REVERSE);
 
         MDF.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
         MDT.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
@@ -42,6 +45,11 @@ public class RobotHardware {
         MDT.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
         MET.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
         MEF.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
+        MSH.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
+        MSHII.setMode(DcMotor.RunMode.RUN_USING_ENCODER)
+
+        MSH.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
+        MSHII.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
 
 
 

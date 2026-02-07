@@ -11,7 +11,7 @@ import com.qualcomm.robotcore.util.ElapsedTime;
 
 @TeleOp(name = "TorretFunciona")
 public class ServoTest extends LinearOpMode {
-    Servo servo;
+    Servo servoI;
     ElapsedTime time = new ElapsedTime();
     void torret(double valor){
         servo.setPosition(valor);

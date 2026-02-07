@@ -26,7 +26,7 @@ public class Constants {
             .strafePodX(0.5) //definir distancia
             .distanceUnit(DistanceUnit.MM) //mudei a unidade de distancia de polegadas para milimetros
             .hardwareMapName("pinpoint") //conferir
-            .encoderResolution(GoBildaPinpointDriver.GoBildaOdometryPods.goBILDA_4_BAR_POD)
+            .encoderResolution(GoBildaPinpointDriver.GoBildaOdometryPods.goBILDA_4_BAR_POD) //ver se a resolucao ta correta
             .forwardEncoderDirection(GoBildaPinpointDriver.EncoderDirection.FORWARD) //testar pra ver se vai ser necessario inverter algum deles
             .strafeEncoderDirection(GoBildaPinpointDriver.EncoderDirection.FORWARD);
 
@@ -34,7 +34,7 @@ public class Constants {
 
     public static Follower createFollower(HardwareMap hardwareMap) {
         return new FollowerBuilder(followerConstants, hardwareMap)
-                .pinpointLocalizer(localizerConstants
+                .pinpointLocalizer(localizerConstants)
                 .pathConstraints(pathConstraints)
                 .mecanumDriveTrain(driveConstants)
                 .build();

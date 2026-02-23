@@ -1,40 +1,38 @@
 package org.firstinspires.ftc.teamcode.opmode.tests;
 
-import static org.firstinspires.ftc.robotcore.external.BlocksOpModeCompanion.opMode;
-
+import com.acmerobotics.dashboard.config.Config;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
-import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
-import com.qualcomm.robotcore.hardware.CRServo;
+import com.qualcomm.robotcore.hardware.HardwareMap;
 import com.qualcomm.robotcore.hardware.Servo;
 import com.qualcomm.robotcore.util.ElapsedTime;
 
-@TeleOp(name = "TorretFunciona")
-public class ServoTest extends LinearOpMode {
-    Servo servoI;
-    ElapsedTime time = new ElapsedTime();
+public class AnguladorTest {
+   private Servo servo;
+
+    public AnguladorTest(HardwareMap hardwareMap){
+        servo = hardwareMap.get(Servo.class,"servo");
+    }
     void torret(double valor){
         servo.setPosition(valor);
     }
 
-    @Override
-    public void runOpMode() throws InterruptedException {
 
-        servo = hardwareMap.get(Servo.class,"servo");
+            void stage3(){
+                torret(0);
+            }
 
-        waitForStart();
-        while (opModeIsActive()){
+             void stage0(){
+                 torret(0.65);
+             }
 
-            if (gamepad2.dpad_up  ){
-                torret(0.10);
-            } else if (gamepad2.dpad_down) {
-                torret(0.7);
-            } else if (gamepad2.dpad_left) {
-                torret(0.5);
-            }else if (gamepad2.dpad_right){
+             void stage1(){
+                 torret(0.5);
+             }
+
+             void stage2(){
                 torret(0.25);
             }
 
         }
-    }
-}
+

@@ -24,9 +24,7 @@ public class Constants {
   public static PinpointConstants localizerConstants = new PinpointConstants()
             .forwardPodY(-5) //definir distancia
             .strafePodX(0.5) //definir distancia
-            .distanceUnit(DistanceUnit.MM) //mudei a unidade de distancia de polegadas para milimetros
             .hardwareMapName("pinpoint") //conferir
-            .encoderResolution(GoBildaPinpointDriver.GoBildaOdometryPods.goBILDA_4_BAR_POD) //ver se a resolucao ta correta
             .forwardEncoderDirection(GoBildaPinpointDriver.EncoderDirection.FORWARD) //testar pra ver se vai ser necessario inverter algum deles
             .strafeEncoderDirection(GoBildaPinpointDriver.EncoderDirection.FORWARD);
 

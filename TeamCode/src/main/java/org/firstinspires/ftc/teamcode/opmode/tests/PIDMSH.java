@@ -1,25 +1,17 @@
 package org.firstinspires.ftc.teamcode.opmode.tests;
 
-import static com.sun.tools.javac.jvm.ByteCodes.error;
-import static org.firstinspires.ftc.robotcore.external.BlocksOpModeCompanion.linearOpMode;
-import static org.firstinspires.ftc.robotcore.external.BlocksOpModeCompanion.telemetry;
-
 import com.acmerobotics.dashboard.config.Config;
-import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
-import com.qualcomm.robotcore.eventloop.opmode.OpMode;
-import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.DcMotorEx;
 import com.qualcomm.robotcore.hardware.DcMotorSimple;
 import com.qualcomm.robotcore.hardware.HardwareMap;
 import com.qualcomm.robotcore.hardware.PIDFCoefficients;
-import com.qualcomm.robotcore.hardware.Servo;
 
 import org.firstinspires.ftc.robotcore.external.Telemetry;
 
 @Config
 
-public class Pid2{
+public class PIDMSH {
     private DcMotorEx MSH,MSH2;
     private Telemetry telemetry;
 
@@ -29,7 +21,7 @@ public class Pid2{
     public static double F = 11.50;
     public static double targetVelocity = 1680.0;
 
-    public Pid2(HardwareMap hardwareMap,Telemetry telemetry){
+    public PIDMSH(HardwareMap hardwareMap, Telemetry telemetry){
        this.telemetry = telemetry;
 
         MSH = hardwareMap.get(DcMotorEx.class,"MSH");

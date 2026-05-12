@@ -1,15 +1,15 @@
-package org.firstinspires.ftc.teamcode.hardware.subsystems;
+    package org.firstinspires.ftc.teamcode.opmode.tests;
 
 import com.qualcomm.robotcore.util.ElapsedTime;
 import org.firstinspires.ftc.teamcode.interfaces.SubsystemBase;
 import org.firstinspires.ftc.teamcode.hardware.robot.RobotHardware;
 
-public class TorretSubsystem implements SubsystemBase {
+public class AngleTest implements SubsystemBase {
     private RobotHardware robot;
     private ElapsedTime timer = new ElapsedTime();
 
 
-    public TorretSubsystem(RobotHardware robot) {
+    public AngleTest(RobotHardware robot) {
         this.robot = robot;
     }
 

@@ -6,13 +6,12 @@ import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.DcMotorEx;
 import com.qualcomm.robotcore.hardware.DistanceSensor;
-import org.firstinspires.ftc.teamcode.opmode.tests.Pid2;
 
 import org.firstinspires.ftc.robotcore.external.navigation.DistanceUnit;
 
 @Config
 @TeleOp(name = "TesteSpindex")
-public class TestSensorPID extends OpMode {
+public class TestSensor extends OpMode {
 
     private DcMotorEx MIT;
     private DistanceSensor sensor;

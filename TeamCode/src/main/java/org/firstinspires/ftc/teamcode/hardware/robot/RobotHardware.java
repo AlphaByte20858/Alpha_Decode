@@ -27,6 +27,7 @@ public class RobotHardware {
         MSH = opMode.hardwareMap.get(DcMotorEx.class, "MSH");
         MSHII = opMode.hardwareMap.get(DcMotorEx.class, "MSHII");
         MIT = opMode.hardwareMap.get(DcMotorEx.class, "MIT");
+        servo = opMode.hardwareMap.get(Servo.class, "servo");
 
         MDF.setDirection(DcMotorSimple.Direction.FORWARD);
         MDT.setDirection(DcMotorSimple.Direction.FORWARD);

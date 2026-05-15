@@ -11,7 +11,7 @@ import org.firstinspires.ftc.robotcore.external.navigation.DistanceUnit;
 
 @Config
 @TeleOp(name = "TesteSpindex")
-public class TestSensor extends OpMode {
+public class TestSensorPID extends OpMode {
 
     private DcMotorEx MIT;
     private DistanceSensor sensor;
@@ -46,7 +46,7 @@ public class TestSensor extends OpMode {
         boolean detectNow  = (distancia > 1 && distancia < 9);
 
         if (detectNow && !detectLast) {
-            
+
             MIT.setVelocityPIDFCoefficients(velKp, velKi, velKd, velKf);
             MIT.setPositionPIDFCoefficients(posKp);
 

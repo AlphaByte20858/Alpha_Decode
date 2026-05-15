@@ -22,7 +22,7 @@ public class PIDMSH {
     public static double targetVelocity = 1680.0;
 
     public PIDMSH(HardwareMap hardwareMap, Telemetry telemetry){
-       this.telemetry = telemetry;
+        this.telemetry = telemetry;
 
         MSH = hardwareMap.get(DcMotorEx.class,"MSH");
         MSH2 = hardwareMap.get(DcMotorEx.class,"MSH2");
@@ -44,35 +44,33 @@ public class PIDMSH {
 
 
 
-        }
+    }
 
-        void ligar(){
+    void ligar(){
 
-            MSH.setVelocity(targetVelocity);
-            MSH2.setVelocity(targetVelocity);
+        MSH.setVelocity(targetVelocity);
+        MSH2.setVelocity(targetVelocity);
 
-            telemetry.addData("TargetVel ", targetVelocity);
-            telemetry.addData("Vel atual: ", MSH.getVelocity());
-            telemetry.addData("power ", MSH.getPower());
-            telemetry.update();
-        }
+        telemetry.addData("TargetVel ", targetVelocity);
+        telemetry.addData("Vel atual: ", MSH.getVelocity());
+        telemetry.addData("power ", MSH.getPower());
+        telemetry.update();
+    }
 
-        void desligar(){
+    void desligar(){
         MSH.setVelocity(0);
         MSH2.setVelocity(0);
-        }
+    }
 
-        public void telemetria(){
-            double v1 = MSH.getVelocity();
-            double v2 = MSH2.getVelocity();
+    public void telemetria(){
+        double v1 = MSH.getVelocity();
+        double v2 = MSH2.getVelocity();
 
-            telemetry.addData("Target: ", targetVelocity);
-            telemetry.addData("Vel atual : ",v1);
-            telemetry.addData("Vel atual2: ", v2);
-            telemetry.addData("Erro: ", targetVelocity - v1);
-
-        }
+        telemetry.addData("Target: ", targetVelocity);
+        telemetry.addData("Vel atual : ",v1);
+        telemetry.addData("Vel atual2: ", v2);
+        telemetry.addData("Erro: ", targetVelocity - v1);
 
     }
 
-
+}

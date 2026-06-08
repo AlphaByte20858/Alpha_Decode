@@ -1,4 +1,4 @@
-package org.firstinspires.ftc.teamcode.pedroPathing.ftc.drivetrains;
+package org.firstinspires.ftc.teamcode.pedropathing.ftc.drivetrains;
 
 import com.pedropathing.geometry.Pose;
 import com.pedropathing.math.Vector;

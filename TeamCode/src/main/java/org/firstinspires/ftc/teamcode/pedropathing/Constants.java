@@ -44,7 +44,7 @@ public class Constants {
             .strafePodX(0) //definir distancia
             .distanceUnit(DistanceUnit.INCH)
             .hardwareMapName("pipoint")
-            .encoderResolution(GoBildaPinpointDriver.GoBildaOdometryPods.goBILDA_4_BAR_POD)
+            .encoderResolution(GoBildaPinpointDriver.GoBildaOdometryPods.goBILDA_SWINGARM_POD)
             .forwardEncoderDirection(GoBildaPinpointDriver.EncoderDirection.FORWARD)
 
             ;

@@ -1,4 +1,4 @@
-package org.firstinspires.ftc.teamcode.pedroPathing.ftc;
+package org.firstinspires.ftc.teamcode.pedropathing.ftc;
 import com.pedropathing.drivetrain.Drivetrain;
 import com.pedropathing.follower.Follower;
 import com.pedropathing.follower.FollowerConstants;

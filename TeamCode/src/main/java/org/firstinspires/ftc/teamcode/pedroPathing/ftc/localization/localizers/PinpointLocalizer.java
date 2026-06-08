@@ -1,4 +1,4 @@
-package org.firstinspires.ftc.teamcode.pedroPathing.ftc.localization.localizers;
+package org.firstinspires.ftc.teamcode.pedropathing.ftc.localization.localizers;
 
 import android.annotation.SuppressLint;
 

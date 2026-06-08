@@ -1,4 +1,4 @@
-package org.firstinspires.ftc.teamcode.pedroPathing.ftc.drivetrains;
+package org.firstinspires.ftc.teamcode.pedropathing.ftc.drivetrains;
 
 import static com.pedropathing.math.MathFunctions.findNormalizingScaling;
 

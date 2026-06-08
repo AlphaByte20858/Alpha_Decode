@@ -1,4 +1,4 @@
-package org.firstinspires.ftc.teamcode.pedroPathing.ftc.localization.constants;
+package org.firstinspires.ftc.teamcode.pedropathing.ftc.localization.constants;
 
 
 import com.pedropathing.ftc.localization.CustomIMU;

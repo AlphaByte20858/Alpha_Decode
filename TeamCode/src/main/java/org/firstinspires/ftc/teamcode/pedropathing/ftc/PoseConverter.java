@@ -1,4 +1,4 @@
-package org.firstinspires.ftc.teamcode.pedroPathing.ftc;
+package org.firstinspires.ftc.teamcode.pedropathing.ftc;
 
 import com.pedropathing.geometry.CoordinateSystem;
 import com.pedropathing.geometry.Pose;

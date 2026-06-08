@@ -19,7 +19,7 @@
  * SOFTWARE.
  */
 
-package org.firstinspires.ftc.teamcode.pedroPathing.ftc.localization.localizers;
+package org.firstinspires.ftc.teamcode.pedropathing.ftc.localization.localizers;
 
 import com.pedropathing.ftc.localization.constants.OctoQuadConstants;
 import com.qualcomm.hardware.digitalchickenlabs.OctoQuad;
@@ -63,7 +63,7 @@ public class OctoQuadLocalizer implements Localizer
     }
 
     /**
-     * Allows decoupling OctoQuad hardware read cycle from PedroPathing.
+     * Allows decoupling OctoQuad hardware read cycle from pedropathing.
      * This may be useful if you, for example, want to use a single bulk
      * read from the OQ to grab both localizer and encoder data, and then
      * send the localizer data to Pedro while using the encoder data elsewhere.

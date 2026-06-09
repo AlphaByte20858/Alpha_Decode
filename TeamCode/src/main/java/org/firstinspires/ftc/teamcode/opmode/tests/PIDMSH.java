@@ -1,25 +1,17 @@
 package org.firstinspires.ftc.teamcode.opmode.tests;
 
-import static com.sun.tools.javac.jvm.ByteCodes.error;
-import static org.firstinspires.ftc.robotcore.external.BlocksOpModeCompanion.linearOpMode;
-import static org.firstinspires.ftc.robotcore.external.BlocksOpModeCompanion.telemetry;
-
 import com.acmerobotics.dashboard.config.Config;
-import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
-import com.qualcomm.robotcore.eventloop.opmode.OpMode;
-import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.DcMotorEx;
 import com.qualcomm.robotcore.hardware.DcMotorSimple;
 import com.qualcomm.robotcore.hardware.HardwareMap;
 import com.qualcomm.robotcore.hardware.PIDFCoefficients;
-import com.qualcomm.robotcore.hardware.Servo;
 
 import org.firstinspires.ftc.robotcore.external.Telemetry;
 
 @Config
 
-public class Pid2{
+public class PIDMSH {
     private DcMotorEx MSH,MSH2;
     private Telemetry telemetry;
 
@@ -29,8 +21,8 @@ public class Pid2{
     public static double F = 11.50;
     public static double targetVelocity = 1680.0;
 
-    public Pid2(HardwareMap hardwareMap,Telemetry telemetry){
-       this.telemetry = telemetry;
+    public PIDMSH(HardwareMap hardwareMap, Telemetry telemetry){
+        this.telemetry = telemetry;
 
         MSH = hardwareMap.get(DcMotorEx.class,"MSH");
         MSH2 = hardwareMap.get(DcMotorEx.class,"MSH2");
@@ -52,35 +44,33 @@ public class Pid2{
 
 
 
-        }
+    }
 
-        void ligar(){
+    void ligar(){
 
-            MSH.setVelocity(targetVelocity);
-            MSH2.setVelocity(targetVelocity);
+        MSH.setVelocity(targetVelocity);
+        MSH2.setVelocity(targetVelocity);
 
-            telemetry.addData("TargetVel ", targetVelocity);
-            telemetry.addData("Vel atual: ", MSH.getVelocity());
-            telemetry.addData("power ", MSH.getPower());
-            telemetry.update();
-        }
+        telemetry.addData("TargetVel ", targetVelocity);
+        telemetry.addData("Vel atual: ", MSH.getVelocity());
+        telemetry.addData("power ", MSH.getPower());
+        telemetry.update();
+    }
 
-        void desligar(){
+    void desligar(){
         MSH.setVelocity(0);
         MSH2.setVelocity(0);
-        }
+    }
 
-        public void telemetria(){
-            double v1 = MSH.getVelocity();
-            double v2 = MSH2.getVelocity();
+    public void telemetria(){
+        double v1 = MSH.getVelocity();
+        double v2 = MSH2.getVelocity();
 
-            telemetry.addData("Target: ", targetVelocity);
-            telemetry.addData("Vel atual : ",v1);
-            telemetry.addData("Vel atual2: ", v2);
-            telemetry.addData("Erro: ", targetVelocity - v1);
-
-        }
+        telemetry.addData("Target: ", targetVelocity);
+        telemetry.addData("Vel atual : ",v1);
+        telemetry.addData("Vel atual2: ", v2);
+        telemetry.addData("Erro: ", targetVelocity - v1);
 
     }
 
-
+}

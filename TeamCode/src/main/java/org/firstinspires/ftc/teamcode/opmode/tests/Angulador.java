@@ -1,16 +1,12 @@
 package org.firstinspires.ftc.teamcode.opmode.tests;
 
-import com.acmerobotics.dashboard.config.Config;
-import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
-import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.HardwareMap;
 import com.qualcomm.robotcore.hardware.Servo;
-import com.qualcomm.robotcore.util.ElapsedTime;
 
-public class AnguladorTest {
+public class Angulador {
    private Servo servo;
 
-    public AnguladorTest(HardwareMap hardwareMap){
+    public Angulador(HardwareMap hardwareMap){
         servo = hardwareMap.get(Servo.class,"servo");
     }
     void torret(double valor){

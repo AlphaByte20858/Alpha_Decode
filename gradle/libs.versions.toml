@@ -1,0 +1,9 @@
+[versions]
+gradle = "9.2.1"
+jacksonDatabind = "2.21.3"
+kotlinStdlib = "2.3.21"
+
+[libraries]
+gradle = { group = "com.android.tools.build", name = "gradle", version.ref = "gradle" }
+jackson-databind = { group = "com.fasterxml.jackson.core", name = "jackson-databind", version.ref = "jacksonDatabind" }
+kotlin-stdlib = { group = "org.jetbrains.kotlin", name = "kotlin-stdlib", version.ref = "kotlinStdlib" }

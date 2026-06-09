@@ -6,7 +6,6 @@ import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.DcMotorEx;
 import com.qualcomm.robotcore.hardware.DistanceSensor;
-import org.firstinspires.ftc.teamcode.opmode.tests.Pid2;
 
 import org.firstinspires.ftc.robotcore.external.navigation.DistanceUnit;
 
@@ -47,7 +46,7 @@ public class TestSensorPID extends OpMode {
         boolean detectNow  = (distancia > 1 && distancia < 9);
 
         if (detectNow && !detectLast) {
-            
+
             MIT.setVelocityPIDFCoefficients(velKp, velKi, velKd, velKf);
             MIT.setPositionPIDFCoefficients(posKp);
 
